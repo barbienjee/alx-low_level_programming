@@ -1,1 +1,1 @@
-Write a C program that prints using printf
+Write a C program that prints the size of various types on the computer
