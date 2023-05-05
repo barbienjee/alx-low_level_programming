@@ -11,19 +11,23 @@
  */
 char *leet(char *s)
 {
-	int string_len, leetcount;
+	int string_length, leetcount;
 	char leetLetters[] = "aAeEoOtTlL";
-	char leetNums[] = "4433007711"
+	char leetNums[] = "4433007711";
 
-	while (str[indx1])
+	string_length = 0;
+	while (s[string_length] != '\0')
 	{
-		for (indx2 = 0; indx2 <= 7; indx2++)
+		leetcount = 0;
+		while (leetcount < 10)
 		{
-		if (str[indx1] == leet[indx2] ||
-			str[indx1] - 32 == leet[indx2])
-			str[indx1] = indx2 + '0';
+		if (leetLetters[leetcount] == s[string_length])
+		{
+			s[string_length] = leetNums[leetcount];
 		}
-		indx1++;
+		leetcount++;
+		}
+		string_length++;
 	}
-	return (str);
+	return (s);
 }
